@@ -1,11 +1,26 @@
 import { createStackNavigator } from 'react-navigation-stack'
 
 import RegisterProductScreen from '../Pages/RegisterProduct/RegisterProduct'
+import AddRegisterProductScreen from '../Pages/RegisterProduct/AddRegisterProduct/AddRegProd'
 
-const RegisterProductScreen = createStackNavigator (
+const RegisterProductNavigator = createStackNavigator (
     {
-        RegProd: { screen: RegisterProductScreen }
+        RegisterProduct: { 
+                            screen: RegisterProductScreen,
+                            navigationOptions: {
+                                headerShown: false
+                            }
+                        },
+        AddRegisterProd: { 
+                            screen: AddRegisterProductScreen,
+                            navigationOptions: {
+                                headerShown: false
+                            }
+                        }
+    },
+    {
+        initialRouteName: 'RegisterProduct'
     }
 )
 
-export default RegisterProductScreen;
+export default RegisterProductNavigator;

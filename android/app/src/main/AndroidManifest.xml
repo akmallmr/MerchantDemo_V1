@@ -2,6 +2,10 @@
   package="com.merchantdemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
       android:name=".MainApplication"
@@ -10,6 +14,10 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+      <meta-data
+      android:name="com.google.android.geo.API_KEY"
+      android:value="AIzaSyD2UVhsmHEKaUdYMVjLcl4A2rr3B1Zj9Oc"/>
+
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
@@ -20,13 +28,8 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
-      <meta-data
-      android:name="com.google.android.geo.API_KEY"
-      android:value="AIzaSyAbGrkZ8nM_Z23BZtcVP_QZ_jX7GIC50xQ"/>
-  
-      <!-- You will also only need to add this uses-libray tag -->
-      <uses-library android:name="org.apache.http.legacy" android:required="false"/>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>
-
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+      
 </manifest>

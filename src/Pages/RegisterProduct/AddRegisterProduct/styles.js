@@ -30,6 +30,43 @@ const styles = StyleSheet.create ({
         fontSize: 15,
         fontWeight: '600'
     },
+    containerUploadButton: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginHorizontal: 20,
+    },
+    buttonUpload: {
+        justifyContent: 'center',
+        width: 125,
+        height: 40,
+        borderRadius: 10,
+        backgroundColor: '#46525F',
+    },
+    buttonUploadTitle: {
+        alignSelf: 'center',
+        color: 'white',
+        fontWeight: '600'
+    },
+    limitImageText: {
+        alignSelf: 'center',
+        fontStyle: 'italic',
+        color: 'red',
+        right: 120
+    },
+    boxDescription: {
+        marginHorizontal: 23,
+        borderWidth: 1,
+        borderColor: 'grey',
+        height: 225,
+        padding: 5,
+        textAlignVertical: 'top'
+    },
+    limitDescText: {
+        alignSelf: 'flex-end',
+        fontStyle: 'italic',
+        color: 'red',
+        right: 23
+    },
     footerContainer: {
         flex: 1,
         justifyContent: 'flex-end',

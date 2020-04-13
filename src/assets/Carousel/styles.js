@@ -7,7 +7,7 @@ const styles = StyleSheet.create ({
     cardView:{
         flex: 1,
         width: width - 20,
-        height: height / 3,
+        height: height / 6,
         backgroundColor: 'white',
         // marginTop: 40,
         margin: 10,
@@ -20,39 +20,40 @@ const styles = StyleSheet.create ({
     },
     textView:{
         position: 'absolute',
-        bottom: 10,
-        margin: 10,
+        bottom: 5,
+        margin: 5,
         left: 5
     },
     image:{
         width: width-20,
-        height: height / 3,
+        height: height / 6,
         borderRadius: 10,
     },
     itemTitle: {
         color: 'white',
-        fontSize: 22,
+        fontSize: 18,
         shadowColor: '#000',
         shadowOffset: {width: 0.8, height: 0.8},
         shadowOpacity: 1,
         shadowRadius: 3,
-        marginBottom: 5,
         fontWeight: 'bold',
         elevation: 5
     },
     itemDescription:{
         color: 'white',
-        fontSize: 12,
+        fontSize: 9,
         shadowColor: '#000',
         shadowOffset: {width: 0.8, height: 0.8},
         shadowOpacity: 1,
         shadowRadius: 3,
+        padding: 2.5,
         elevation: 5
     },
     //dotView
     dotView:{ 
         flexDirection: 'row',
-        justifyContent: 'center',
+        bottom: 5,
+        paddingLeft: 10
     }
 })
 
