@@ -3,19 +3,21 @@ import { View, Text } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation'
 
-import HomeScreen from '../Pages/Home/Home';
+// import HomeScreen from '../Pages/Home/Home';
+import HomeScreenV1 from '../Pages/Home/HomeRev_1';
 import EditProfile from '../Pages/Home/EditProfile/EditProfile';
 import ScanqrScreen from '../Pages/ScanQR/ScanQR';
 import MapsScreen from '../Pages/Maps/Maps';
 import CreateVoucherScreen from '../Pages/CreateVoucher/CreateVoucher';
 
-import RegisterProduct from '../navigation/RegisterProductNavigator';
+// import RegisterProduct from '../navigation/RegisterProductNavigator';
 import RegisterProductNavigator from '../navigation/RegisterProductNavigator';
 
 const MainNavigator = createStackNavigator (
     {
         Home: { 
-                screen: HomeScreen, 
+                screen: HomeScreenV1,
+                // screen: HomeScreen, 
                 navigationOptions: {
                     headerShown: false,
                     title: 'MERCHANT',
