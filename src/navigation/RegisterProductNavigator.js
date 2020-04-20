@@ -1,26 +1,31 @@
-import { createStackNavigator } from 'react-navigation-stack'
+import {createStackNavigator, TransitionPresets} from 'react-navigation-stack';
 
-import RegisterProductScreen from '../Pages/RegisterProduct/RegisterProduct'
-import AddRegisterProductScreen from '../Pages/RegisterProduct/AddRegisterProduct/AddRegProd'
+import RegisterProductScreen from '../Pages/RegisterProduct/RegisterProduct';
+import AddRegisterProductScreen from '../Pages/RegisterProduct/AddRegisterProduct/AddRegProd';
 
-const RegisterProductNavigator = createStackNavigator (
-    {
-        RegisterProduct: { 
-                            screen: RegisterProductScreen,
-                            navigationOptions: {
-                                headerShown: false
-                            }
-                        },
-        AddRegisterProd: { 
-                            screen: AddRegisterProductScreen,
-                            navigationOptions: {
-                                headerShown: false
-                            }
-                        }
+const RegisterProductNavigator = createStackNavigator(
+  {
+    RegisterProduct: {
+      screen: RegisterProductScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
     },
-    {
-        initialRouteName: 'RegisterProduct'
-    }
-)
+    AddRegisterProd: {
+      screen: AddRegisterProductScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+  },
+  {
+    initialRouteName: 'RegisterProduct',
+    defaultNavigationOptions: {
+      gestureDirection: 'horizontal',
+      gestureEnabled: true,
+      ...TransitionPresets.SlideFromRightIOS,
+    },
+  },
+);
 
 export default RegisterProductNavigator;

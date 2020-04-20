@@ -1,5 +1,5 @@
 import MainHeader from './MainHeader';
 import SubHeaderOne from './SubHeaderOne';
-import SubeHeaderTwo from './SubeHeaderTwo';
+import SubHeaderTwo from './SubHeaderTwo';
 
-export {MainHeader, SubHeaderOne, SubeHeaderTwo};
+export {MainHeader, SubHeaderOne, SubHeaderTwo};

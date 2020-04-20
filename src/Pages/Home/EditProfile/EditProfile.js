@@ -1,8 +1,7 @@
 import React from 'react';
 import {View, ScrollView} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 
-import {SubeHeaderTwo, Input, SubFooter} from '../../../components';
+import {Input, SubFooter, SubHeaderTwo} from '../../../components';
 
 const EditProfile = ({navigation}) => {
   const backHandle = () => {
@@ -11,7 +10,7 @@ const EditProfile = ({navigation}) => {
 
   return (
     <View style={styles.wrapper.default}>
-      <SubeHeaderTwo title="Settings" onPress={() => backHandle()} />
+      <SubHeaderTwo title="Settings" onPress={() => backHandle()} />
       <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
         <View style={styles.space(15)} />
         <Input title="Merchant Name" placeholder="ex. Footware Shop" />

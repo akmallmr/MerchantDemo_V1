@@ -1,13 +1,12 @@
 import React from 'react';
 import {View, ScrollView} from 'react-native';
 
-// import styles from './styles';
 import {
   SubFooter,
-  SubeHeaderTwo,
   Input,
   InputImage,
   InputDesc,
+  SubHeaderTwo,
 } from '../../../components';
 
 const AddRegProd = ({navigation}) => {
@@ -16,10 +15,7 @@ const AddRegProd = ({navigation}) => {
   };
   return (
     <View style={styles.wrapper.default}>
-      <SubeHeaderTwo
-        title="Add Register Product"
-        onPress={() => backHandle()}
-      />
+      <SubHeaderTwo title="Add Register Product" onPress={() => backHandle()} />
       <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
         <View style={styles.space(15)} />
         <Input

@@ -3,6 +3,7 @@ import {View, SafeAreaView} from 'react-native';
 
 import styles from './styles';
 import {SubHeaderOne, SubFooter} from '../../components';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const RegisterProduct = ({navigation}) => {
   const backHandle = screen => {
@@ -19,7 +20,7 @@ const RegisterProduct = ({navigation}) => {
           title="Register Product"
           onPress={() => backHandle('Home')}
         />
-        <View style={styles.footerContainer} />
+        <ScrollView />
         <SubFooter title="Add" onPress={() => handleGoTo('AddRegisterProd')} />
       </View>
     </SafeAreaView>
