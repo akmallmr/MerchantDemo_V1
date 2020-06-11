@@ -5,6 +5,7 @@ import Input from './Input';
 import InputImage from './InputImage';
 import InputDesc from './InputDesc';
 import Dropdown from './Dropdown';
+import Button from './Button';
 
 export {
   MenuButton,
@@ -14,4 +15,5 @@ export {
   InputImage,
   InputDesc,
   Dropdown,
+  Button,
 };

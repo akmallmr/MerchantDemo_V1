@@ -153,6 +153,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('merchant_v2.keystore')
+            storePassword '12345678'
+            keyAlias 'merchant'
+            keyPassword '12345678'
+    }
     }
     buildTypes {
         debug {
@@ -161,7 +167,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -183,6 +189,7 @@ android {
 }
 
 dependencies {
+    implementation project(':rn-fetch-blob')
     implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
     implementation fileTree(dir: "libs", include: ["*.jar"])

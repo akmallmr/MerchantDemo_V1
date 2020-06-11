@@ -1,5 +1,6 @@
-import React from 'react';
-import {View, StatusBar, SafeAreaView} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, StatusBar, SafeAreaView, Alert} from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import styles from './styles';
 import {colors} from '../../utils';
@@ -9,6 +10,29 @@ const Home = ({navigation}) => {
   const handleToGo = screen => {
     navigation.navigate(screen);
   };
+
+  const _signOutAsync = () => {
+    Alert.alert(
+      'Are you sure you want to Sign out ? ',
+      ' ',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {
+          text: 'YES',
+          onPress: async () => {
+            await AsyncStorage.clear();
+            handleToGo('SignIn');
+          },
+        },
+      ],
+      {cancelable: false},
+    );
+  };
+
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
@@ -16,7 +40,8 @@ const Home = ({navigation}) => {
         {/* Header */}
         <MainHeader
           title="Merchant"
-          onPress={() => handleToGo('EditProfile')}
+          onPressEditProf={() => handleToGo('EditProfile')}
+          onPressSignOut={() => _signOutAsync()}
         />
         {/* Menu */}
         <View style={{alignItems: 'center'}}>
@@ -32,13 +57,13 @@ const Home = ({navigation}) => {
           <View style={{flexDirection: 'row'}}>
             <MenuButton
               fontAwesome="plus-square"
-              title="Register Product"
+              title="My Product"
               onPress={() => handleToGo('RegisterProduct')}
             />
             <View style={{width: 15}} />
             <MenuButton
               fontAwesome="receipt"
-              title="Create Voucher"
+              title="My Voucher"
               onPress={() => handleToGo('CreateVoucher')}
             />
           </View>

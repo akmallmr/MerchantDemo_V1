@@ -1,10 +1,6 @@
 import * as React from 'react';
 import {View, Text} from 'react-native';
-import {
-  createStackNavigator,
-  TransitionPresets,
-  CardStyleInterpolators,
-} from 'react-navigation-stack';
+import {createStackNavigator, TransitionPresets} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 
 // import HomeScreen from '../Pages/Home/Home';
@@ -36,6 +32,9 @@ const MainNavigator = createStackNavigator(
           fontSize: 15,
           fontWeight: 'bold',
           color: '#46525F',
+        },
+        navigationOptions: {
+          ...TransitionPresets.ScaleFromCenterAndroid,
         },
       },
     },
